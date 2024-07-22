@@ -1,0 +1,43 @@
+﻿<Properties StartupConfiguration="{11EB3AFC-71AB-49A3-952F-7F4DC471FC9A}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.DesignPatterns PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="DesignPatterns/FactoryPattern/SimpleFactory/CalculatorApplication.cs">
+    <Files>
+      <File FileName="DesignPatterns/FactoryPattern/SimpleFactory/Interface/ICalculate.cs" Line="1" Column="1" />
+      <File FileName="DesignPatterns/FactoryPattern/SimpleFactory/Calculations/Multiplication.cs" Line="1" Column="1" />
+      <File FileName="DesignPatterns/FactoryPattern/SimpleFactory/Factory/CalculatorFactory.cs" Line="18" Column="11" />
+      <File FileName="DesignPatterns/FactoryPattern/SimpleFactory/Utility/HistoryTracker.cs" Line="1" Column="1" />
+      <File FileName="DesignPatterns/FactoryPattern/SimpleFactory/Calculations/Addition.cs" Line="1" Column="1" />
+      <File FileName="DesignPatterns/FactoryPattern/SimpleFactory/Calculations/Division.cs" />
+      <File FileName="DesignPatterns/FactoryPattern/SimpleFactory/CalculatorApplication.cs" Line="29" Column="10" />
+      <File FileName="DesignPatterns/FactoryPattern/SimpleFactory/Calculations/Subtraction.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DesignPatterns" expanded="True">
+            <Node name="DesignPatterns" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="FrameworkReferences" expanded="True" />
+              </Node>
+              <Node name="FactoryPattern" expanded="True">
+                <Node name="SimpleFactory" expanded="True">
+                  <Node name="Calculations" expanded="True" />
+                  <Node name="Factory" expanded="True" />
+                  <Node name="Interface" expanded="True" />
+                  <Node name="Utility" expanded="True" />
+                  <Node name="CalculatorApplication.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
