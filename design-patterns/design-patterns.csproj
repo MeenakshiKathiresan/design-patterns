@@ -11,9 +11,11 @@
   <ItemGroup>
     <None Remove="Creational\" />
     <None Remove="Creational\Factory\" />
+    <None Remove="Creational\Factory\SimpleFactory\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Creational\" />
     <Folder Include="Creational\Factory\" />
+    <Folder Include="Creational\Factory\SimpleFactory\" />
   </ItemGroup>
 </Project>
