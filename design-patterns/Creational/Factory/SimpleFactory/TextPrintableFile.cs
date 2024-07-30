@@ -1,11 +1,11 @@
 ﻿using System;
 namespace design_patterns.Creational.Factory.SimpleFactory
 {
-	public class TXTPrintableFile : IPrintableFile
+	public class TextPrintableFile : IPrintableFile
 	{
 		string filepath;
 
-		public TXTPrintableFile(string _filepath)
+		public TextPrintableFile(string _filepath)
 		{
 			filepath = _filepath;
 		}

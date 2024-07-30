@@ -1,9 +1,9 @@
 ﻿using System;
 namespace design_patterns.Creational.Factory.SimpleFactory
 {
-	public class CSVPrintableFile : IPrintableFile
+	public class CsvPrintableFile : IPrintableFile
 	{
-		public CSVPrintableFile(string _filepath)
+		public CsvPrintableFile(string _filepath)
 		{
             filepath = _filepath;
 		}
