@@ -12,10 +12,14 @@
     <None Remove="Creational\" />
     <None Remove="Creational\Factory\" />
     <None Remove="Creational\Factory\SimpleFactory\" />
+    <None Remove="Creational\Factory\Factory Method\" />
+    <None Remove="Creational\Factory\Abstract Factory\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Creational\" />
     <Folder Include="Creational\Factory\" />
     <Folder Include="Creational\Factory\SimpleFactory\" />
+    <Folder Include="Creational\Factory\Factory Method\" />
+    <Folder Include="Creational\Factory\Abstract Factory\" />
   </ItemGroup>
 </Project>

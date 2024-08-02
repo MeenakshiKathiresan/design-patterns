@@ -5,10 +5,6 @@ namespace design_patterns.Creational.Factory.SimpleFactory
 {
 	public class PrintableFileFactory
 	{
-		public PrintableFileFactory()
-		{
-		}
-
 		public IPrintableFile CreateFilePrinter(string filepath)
 		{
             string ext = Path.GetExtension(filepath);

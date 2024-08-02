@@ -3,10 +3,6 @@ namespace design_patterns.Creational.Factory.SimpleFactory
 {
 	public class FileContentPrinter
 	{
-		public FileContentPrinter()
-		{
-
-		}
 		public static void PrintContent()
 		{
 			Console.WriteLine("Please enter file path");
