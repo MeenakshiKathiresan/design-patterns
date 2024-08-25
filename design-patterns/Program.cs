@@ -9,7 +9,11 @@ namespace App
             //design_patterns.Creational.Factory.SimpleFactory.FileContentPrinter.PrintContent();
 
             // factory method usage
-            design_patterns.Creational.Factory.FactoryMethod.EncryptionService.StartEncryptor();
+            //design_patterns.Creational.Factory.FactoryMethod.EncryptionService.StartEncryptor();
+
+            // abstract factory method usage
+            var quiz = new design_patterns.Creational.Factory.AbstractFactory.QuizService();
+            quiz.StartQuiz();
         }
     }
 }

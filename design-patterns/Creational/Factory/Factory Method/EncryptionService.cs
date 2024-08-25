@@ -7,19 +7,31 @@ namespace design_patterns.Creational.Factory.FactoryMethod
 	{
         public static void StartEncryptor()
         {
-            Console.WriteLine("Please enter the text you want to encrypt");
-            string text = Console.ReadLine();
 
             CaesarEncryptorFactory caesarEncryptorFactory = new CaesarEncryptorFactory();
             IEncryptor encryptor = caesarEncryptorFactory.CreateEncryptor(10);
 
-            Console.WriteLine(encryptor.Encrypt(text));
+            ShiftEncryptorFactory shiftEncryptorFactory = new ShiftEncryptorFactory();
+            IEncryptor encryptor2 = shiftEncryptorFactory.CreateEncryptor(10);
+
+            Console.WriteLine("Please enter the text you want to encrypt");
+            string textToEncrypt = Console.ReadLine();
+            Console.WriteLine(encryptor.Encrypt(textToEncrypt));
 
 
             Console.WriteLine("Please enter the text you want to decrypt");
             string textToDecrypt = Console.ReadLine();
+            Console.WriteLine(encryptor.Decrypt(textToDecrypt));
 
-            Console.WriteLine(encryptor.Decrypt(text));
+            Console.WriteLine("Please enter the text you want to encrypt with shift encryption");
+            string textToEncrypt2 = Console.ReadLine();
+            Console.WriteLine(encryptor2.Encrypt(textToEncrypt2));
+
+
+            Console.WriteLine("Please enter the text you want to decrypt with shift decryption");
+            string textToDecrypt2 = Console.ReadLine();
+            Console.WriteLine(encryptor2.Decrypt(textToDecrypt2));
+
             StartEncryptor();
         }
     }
