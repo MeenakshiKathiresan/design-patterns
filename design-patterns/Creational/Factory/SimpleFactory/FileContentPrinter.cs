@@ -8,7 +8,6 @@ namespace design_patterns.Creational.Factory.SimpleFactory
 			Console.WriteLine("Please enter file path");
 			string filepath = Console.ReadLine();
 
-
 			PrintableFileFactory fileFactory = new PrintableFileFactory();
 			IPrintableFile file = fileFactory.CreateFilePrinter(filepath);
 

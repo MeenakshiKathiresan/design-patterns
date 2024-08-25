@@ -14,6 +14,9 @@
     <None Remove="Creational\Factory\SimpleFactory\" />
     <None Remove="Creational\Factory\Factory Method\" />
     <None Remove="Creational\Factory\Abstract Factory\" />
+    <None Remove="Creational\Builder\" />
+    <None Remove="Creational\Prototype\" />
+    <None Remove="Creational\Singleton\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Creational\" />
@@ -21,5 +24,8 @@
     <Folder Include="Creational\Factory\SimpleFactory\" />
     <Folder Include="Creational\Factory\Factory Method\" />
     <Folder Include="Creational\Factory\Abstract Factory\" />
+    <Folder Include="Creational\Builder\" />
+    <Folder Include="Creational\Prototype\" />
+    <Folder Include="Creational\Singleton\" />
   </ItemGroup>
 </Project>

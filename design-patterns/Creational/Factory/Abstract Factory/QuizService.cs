@@ -5,56 +5,69 @@ namespace design_patterns.Creational.Factory.AbstractFactory
 {
 	public class QuizService
 	{
+		
 		int currentScore = 0;
+
+        IQuizFactory englishQuiz = new EnglishQuiz();
+        IQuizFactory mathQuiz = new MathQuiz();
+
+        public IQuizFactory GetQuizFactory(QuizType type)
+		{
+			switch (type)
+			{
+				case QuizType.english:
+					return englishQuiz;
+				case QuizType.math:
+					return mathQuiz;
+				default:
+					return mathQuiz;
+			}
+		}
+
+		public void DisplayFeedback(bool isCorrect)
+        {
+            if (isCorrect)
+            {
+                Console.WriteLine("That's right!!");
+            }
+            else
+            {
+                Console.WriteLine("Oops.. better luck next time..");
+            }
+
+            Console.WriteLine($"Your current score is {currentScore}");
+        }
+
 
 		public void StartQuiz()
 		{
-			IQuizFactory englishQuiz = new EnglishQuiz();
-			IQuizFactory mathQuiz = new MathQuiz();
-
-            Console.WriteLine("Press 1 for math quiz and 2 for english quiz");
-            string quizType = Console.ReadLine();
-			string question;
-
-			IQuizFactory currentFactory;
-
-            if (quizType == "1")
+			try
 			{
-				question = mathQuiz.questionGenerator.GenerateQuestion();
-				currentFactory = mathQuiz;
+				Console.WriteLine($"Press {(int)QuizType.math} for math quiz and {(int)QuizType.english} for english quiz");
+				QuizType quizType = (QuizType)int.Parse(Console.ReadLine());
 
-            }
-			else if(quizType == "2")
-			{
-				question = englishQuiz.questionGenerator.GenerateQuestion();
-				currentFactory = englishQuiz;
-            }
-			else
-			{
-                Console.WriteLine("Enter a valid input");
-				return;
-            }
+				// Get factory based on type
+				IQuizFactory quizFactory = GetQuizFactory(quizType);
+				string question = quizFactory.questionGenerator.GenerateQuestion();
 
+				Console.WriteLine(question);
+				string ans = Console.ReadLine();
 
-            Console.WriteLine(question);
-			string ans = Console.ReadLine();
+				bool isCorrect = quizFactory.questionGenerator.ValidateAnswer(question, ans);
+				currentScore = quizFactory.scoreKeeper.UpdateScore(isCorrect, currentScore);
 
-			bool isCorrect = currentFactory.questionGenerator.ValidateAnswer(question, ans);
-			currentScore = currentFactory.scoreKeeper.UpdateScore(isCorrect, currentScore);
+				DisplayFeedback(isCorrect);
 
-			if (isCorrect)
-            {
-				Console.WriteLine("That's right!!");
+				// loop again
+				StartQuiz();
 			}
-			else
+			catch (Exception e)
 			{
-				Console.WriteLine("Oops.. better luck next time..");
+				Console.WriteLine(e);
 			}
-			Console.WriteLine($"Your current score is {currentScore}");
-
-			StartQuiz();
-
         }
 	}
+    public enum QuizType
+    { math = 1, english = 2 }
 }
 

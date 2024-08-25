@@ -4,8 +4,9 @@ namespace design_patterns.Creational.Factory.FactoryMethod
 	public class CaesarEncryptor : IEncryptor
 	{
         int _shift;
+        private const int AlphabetSize = 26;
 
-		public CaesarEncryptor(int shift)
+        public CaesarEncryptor(int shift)
 		{
             _shift = shift;
 		}
@@ -20,7 +21,7 @@ namespace design_patterns.Creational.Factory.FactoryMethod
             for (int i = 0; i < text.Length; i++)
             {
                 char ch = text[i];
-                dText[i] = (char)((ch - _shift - a + 26) % 26 + a);
+                dText[i] = (char)((ch - _shift - a + AlphabetSize) % AlphabetSize + a);
             }
 
             return new string(dText);
@@ -36,7 +37,7 @@ namespace design_patterns.Creational.Factory.FactoryMethod
             for (int i = 0; i <text.Length; i++)
             {
                 char ch = text[i];
-                eText[i] = (char)((ch + _shift - a + 26) % 26 + a);
+                eText[i] = (char)((ch + _shift - a + AlphabetSize) % AlphabetSize + a);
             }
 
             return new string(eText);

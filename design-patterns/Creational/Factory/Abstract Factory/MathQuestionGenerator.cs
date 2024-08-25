@@ -17,10 +17,22 @@ namespace design_patterns.Creational.Factory.AbstractFactory
         public bool ValidateAnswer(string question, string answer)
         {
 
+            // evaluate question and get the actual answer
             DataTable dt = new DataTable();
-            var ans = dt.Compute(question, "");
+            var realAnswer = dt.Compute(question, "");
 
-            return int.Parse(answer) == Convert.ToInt32(ans);
+            bool isNumeric  = int.TryParse(answer, out int userAnswer);
+            if (isNumeric)
+            {
+                return userAnswer == Convert.ToInt32(realAnswer);
+            }
+            else
+            {
+                throw new Exception("Please enter a valid input");
+            }
+            
+
+           
         }
     }
 }
