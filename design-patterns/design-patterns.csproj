@@ -17,6 +17,8 @@
     <None Remove="Creational\Builder\" />
     <None Remove="Creational\Prototype\" />
     <None Remove="Creational\Singleton\" />
+    <None Remove="Behavioral\" />
+    <None Remove="Behavioral\Observer\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Creational\" />
@@ -27,5 +29,7 @@
     <Folder Include="Creational\Builder\" />
     <Folder Include="Creational\Prototype\" />
     <Folder Include="Creational\Singleton\" />
+    <Folder Include="Behavioral\" />
+    <Folder Include="Behavioral\Observer\" />
   </ItemGroup>
 </Project>
